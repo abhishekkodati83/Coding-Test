@@ -9,8 +9,7 @@ Here is the tech stack
 
 #### Step 1:
 
-Create a new Azure SQL instance in Azure Cloud through the Azure Portal (did not have time to generate scripts otherwise one can use CLI commands as well to create resources),
-ensure that you enable access to your computer by update the network settings to only enable your system IP
+Create a new Azure SQL instance in Azure Cloud through the Azure Portal (did not have time to generate scripts otherwise one can use CLI commands as well to create resources), ensure that you enable access to your computer by update the network settings to only enable your system IP. The scripts to generate the schema and to create stored procedures used for this solution are under the "Resources" folder.
 
 #### Step 2:
 Clone this Repo and update the conn string with the newly created instance details
