@@ -1,0 +1,191 @@
+{
+	"info": {
+		"_postman_id": "b55df9fb-f357-48ac-bea5-04f7c4a41b66",
+		"name": "Coding Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27063544"
+	},
+	"item": [
+		{
+			"name": "Get Employee By ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFkbWluMUB0ZXN0LmNvbSIsIm5iZiI6MTY4MjM2OTUzMCwiZXhwIjoxNjgyMzY5NTUwLCJpYXQiOjE2ODIzNjk1MzB9.VX-xHIJhAU6GWDDitCnksr13T2DddkWX_IkPqkW7Igs",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:5001/Employee/5",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"Employee",
+						"5"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "5",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Employees",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFkbWluMUB0ZXN0LmNvbSIsIm5iZiI6MTY4MjM2OTUzMCwiZXhwIjoxNjgyMzY5NTUwLCJpYXQiOjE2ODIzNjk1MzB9.VX-xHIJhAU6GWDDitCnksr13T2DddkWX_IkPqkW7Igs",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:5001/Employee",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"Employee"
+					],
+					"query": [
+						{
+							"key": "Authorization",
+							"value": "basic YWRtaW4xQHRlc3QuY29tOnVzZXIx",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Employee",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFkbWluMUB0ZXN0LmNvbSIsIm5iZiI6MTY4MjM3MDAwMCwiZXhwIjoxNjgyMzcwMDIwLCJpYXQiOjE2ODIzNzAwMDB9.0j5b4uOF9jK14eDnm0FOFSI6XPx-OEhlaB1cHk8EWIA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"test\",\n  \"doB\": \"2023-04-24T21:00:53.364Z\",\n  \"employeeId\": 124,\n  \"designation\": \"New deisgnation\",\n  \"doJ\": \"2023-04-24T21:00:53.364Z\",\n  \"photo\": \"Image 1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/Employee",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"Employee"
+					],
+					"query": [
+						{
+							"key": "Authorization",
+							"value": "basic YWRtaW4xQHRlc3QuY29tOnVzZXIx",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Employee",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFkbWluMUB0ZXN0LmNvbSIsIm5iZiI6MTY4MjM3MzE3MCwiZXhwIjoxNjgyMzczMTkwLCJpYXQiOjE2ODIzNzMxNzB9.xkvDB_2u6oD3sHTlMWJZpUUC4L58dpoqLrwAOdsAEq8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"test\",\n  \"doB\": \"2023-04-24T21:00:53.364Z\",\n  \"employeeId\": 127,\n  \"designation\": \"Updated deisgnation\",\n  \"doJ\": \"2023-04-24T21:00:53.364Z\",\n  \"photo\": \"Image 1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/Employee/7",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"Employee",
+						"7"
+					],
+					"query": [
+						{
+							"key": "Authorization",
+							"value": "basic YWRtaW4xQHRlc3QuY29tOnVzZXIx",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Employee",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFkbWluMUB0ZXN0LmNvbSIsIm5iZiI6MTY4MjM3MzU1MiwiZXhwIjoxNjgyMzczNTcyLCJpYXQiOjE2ODIzNzM1NTJ9.72GGprgFdTwvt8cLGx6rj5sATwLu1HR_CoHNfaGgyfo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:5001/Employee/7",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"Employee",
+						"7"
+					],
+					"query": [
+						{
+							"key": "Authorization",
+							"value": "basic YWRtaW4xQHRlc3QuY29tOnVzZXIx",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
