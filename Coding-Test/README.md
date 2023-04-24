@@ -1,4 +1,4 @@
-﻿The application uses JWT tokens to manage sessions, it also has basic authentication implemented but is commented for the purpose of the assignment
+The application uses JWT tokens to manage sessions, it also has basic authentication implemented but is commented for the purpose of the assignment
 
 Here is the tech stack
 
