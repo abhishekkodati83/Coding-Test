@@ -1,0 +1,56 @@
+﻿CREATE TABLE employee
+  (
+     id             BIGINT IDENTITY(1, 1) PRIMARY KEY,
+     name           VARCHAR (100) DEFAULT NULL,
+     dob            DATETIME DEFAULT NULL,
+     employeeId     BIGINT NOT NULL,
+     designation    VARCHAR (50) DEFAULT NULL,
+     dateofjoining  DATETIME NOT NULL,
+     photo          BINARY(64) DEFAULT NULL
+  );
+
+CREATE procedure [dbo].[spAddEmployee]         
+(        
+    @Name VARCHAR(100),
+    @Dob DATETIME,
+    @EmployeeId BIGINT,
+    @Designation VARCHAR(50),
+    @Doj DATETIME,
+    @Photo VARCHAR(MAX)
+)
+as         
+Begin         
+    Insert into employee (name,dob,employeeId, designation, dateofjoining, photo)         
+    Values (@Name,@Dob,@EmployeeId, @Designation, @Doj, CONVERT(varbinary(64), @Photo, 0))
+End
+
+CREATE procedure [dbo].[spUpdateEmployee]         
+( 
+    @Id BIGINT,       
+    @Name VARCHAR(100),
+    @Dob DATETIME,
+    @EmployeeId BIGINT,
+    @Designation VARCHAR(50),
+    @Doj DATETIME,
+    @Photo VARCHAR(MAX)
+)
+as         
+Begin         
+    UPDATE employee 
+    set name = @Name,
+    dob = @Dob,
+    employeeId = @EmployeeId, 
+    designation = @Designation, 
+    dateofjoining = @Doj, 
+    photo = CONVERT(varbinary(64), @Photo, 0)         
+    WHERE Id = @Id
+End
+
+Create procedure spDeleteEmployee         
+( 
+    @Id BIGINT
+)
+as         
+Begin         
+    DELETE FROM employee WHERE Id = @Id
+End
