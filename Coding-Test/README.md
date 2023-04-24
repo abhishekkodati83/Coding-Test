@@ -29,3 +29,4 @@ The resources folder should also have POSTMAN scripts that can be used to check 
 - Unit Testing
 - Proper Exception Handling
 - A more cleaner structure
+- Proper Validations

@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using Coding_Test.Models;
+﻿using System.Collections.Generic;
 using System.Linq;
+using Coding_Test.Models;
 
 public class UserRepository : IUserRepository
 {
